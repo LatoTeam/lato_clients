@@ -6,7 +6,8 @@ module LatoClients
     end
 
     def index
-      @clients = Client.all.paginate(page: params[:page], per_page: 20).order('name ASC')
+      @search_clients = Client.ransack(params[:q])
+      @clients = @search_clients.result.paginate(page: params[:page], per_page: 20).order('name ASC')
     end
 
     def new

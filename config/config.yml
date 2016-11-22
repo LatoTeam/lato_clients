@@ -1,0 +1,17 @@
+# Menu settings
+menu:
+  clients:
+    name: Clients
+    url: /lato/clients
+    icon: clients
+    position: 59
+    permission: 6
+
+# Custom assets settings
+# assets:
+#   starter_application_css:
+#     name: lato_clients/application
+#     type: css
+#   starter_application_js:
+#     name: lato_clients/application
+#     type: js

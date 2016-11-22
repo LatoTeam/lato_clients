@@ -1,0 +1,89 @@
+<% method = :post if !defined? method %>
+
+<%= form_for(@client, html: {class: "lato-form", multipart: true}, method: method) do |f| %>
+
+    <h2 class="form-section-title">Main informations</h2>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.name,
+              name: 'client[name]', label: 'Name', width: 'half', required: true) %>
+
+      <%= raw view(:input, :text).new(value: @client.referent,
+              name: 'client[referent]', label: 'Referent', width: 'half', required: false) %>
+
+    </div>
+
+    <h2 class="form-section-title">Location informations</h2>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.address,
+              name: 'client[address]', label: 'Address', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.city,
+              name: 'client[city]', label: 'City', width: 'half', required: false) %>
+
+    </div>
+
+    <h2 class="form-section-title">Fiscal informations</h2>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.vat,
+              name: 'client[vat]', label: 'Vat', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.fiscal_code,
+              name: 'client[fiscal_code]', label: 'Fiscal code', width: 'half', required: false) %>
+
+    </div>
+
+    <h2 class="form-section-title">Email contacts</h2>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.email_1,
+              name: 'client[email_1]', label: 'Email 1', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.email_2,
+              name: 'client[email_2]', label: 'Email 2', width: 'half', required: false) %>
+
+    </div>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.email_3,
+              name: 'client[email_3]', label: 'Email 3', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.email_pec,
+              name: 'client[email_pec]', label: 'Email PEC', width: 'half', required: false) %>
+
+    </div>
+
+    <h2 class="form-section-title">Phone contacts</h2>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.phone_1,
+              name: 'client[phone_1]', label: 'Phone 1', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.phone_2,
+              name: 'client[phone_2]', label: 'Phone 2', width: 'half', required: false) %>
+
+    </div>
+
+    <div class="form-group">
+
+      <%= raw view(:input, :text).new(value: @client.phone_3,
+              name: 'client[phone_3]', label: 'Phone 3', width: 'half', required: false) %>
+
+      <%= raw view(:input, :text).new(value: @client.phone_4,
+              name: 'client[phone_4]', label: 'Phone 4', width: 'half', required: false) %>
+
+    </div>
+
+    <%= f.submit 'Save', class: 'lato-button', :data => { disable_with: false } %>
+
+</div>
+
+<% end %>

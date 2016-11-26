@@ -1,4 +1,4 @@
 include LatoCore::Interface
 
 # Set language datas
-STARTER_LANG = core_loadModuleLanguages('lato_clients')
+# CLIENTS_LANG = core_loadModuleLanguages('lato_clients')

@@ -14,7 +14,7 @@ actionbar = view(:layout, :actionbar).new(title: "Clients", widgets: [
     {component: searchbar, align: :left}
   ])
 
-index = view(:layout, :index).new(head: ['Name'], elements: @clients, attributes: [:name],
+index = view(:layout, :index).new(head: ['Name', 'Referent'], elements: @clients, attributes: [:name, :referent],
 link: lato_clients.clients_path, show_link: true, edit_link: true, delete_link: true)
 
 %>
